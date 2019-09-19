@@ -17,7 +17,7 @@
   "scripts": {
     "build": "mdx-deck build src/deck.mdx",
     "help": "mdx-deck",
-    "image": "mdx-deck screenshot src/deck.mdx",
+    "image": "mdx-deck sGITcreenshot src/deck.mdx",
     "pdf": "mdx-deck pdf src/deck.mdx",
     "copy:static": "cp -r src/img dist",
     "publish:deck": "yarn build && yarn copy:static && gh-pages -d dist",
