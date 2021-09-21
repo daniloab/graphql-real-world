@@ -1,22 +1,174 @@
-import { Head, Image } from 'mdx-deck'
+import { Head, Image, Appear } from 'mdx-deck'
 import Code from 'mdx-code';
 import { CodeSurfer } from "mdx-deck-code-surfer";
 
 import { Cover } from './Cover';
 import { Intro } from './Intro';
+import { Roadmap } from './Roadmap';
 import { Thanks } from './Thanks';
 import { Feedback } from './Feedback';
 
 export { default as theme } from './theme'
 
 <Head>
-  <title>Set title page here</title>
+  <title>GraphQL - Real World</title>
 </Head>
 
 <Cover />
 ---
 <Intro />
+
+---
+## Overview
+
+<Roadmap />
+
+---
+## GraphQL
+
+<ul>
+    <Appear>
+        <li>launched by facebook</li>
+        <li>created on 2012 and open-sourced on 2015</li>
+        <li>it was created to resolve mobile team issues on Facebook</li>
+        <li>It is a Query language to read and mutate data</li>
+        <li>Based on three types: Query, Mutation and Subscription</li>
+    </Appear>
+</ul>
+
+---
+
+# What Solves
+
+<ul>
+    <Appear>
+        <li>Collocation of data</li>
+        <li>Over-Fetching and Under-Fetching</li>
+        <li>Evolve APIs without versions</li>
+        <li>Strong type system</li>
+        <li>Creates a source of truth from the backend</li>
+    </Appear>
+</ul>
+
+---
+
+## The Documentary
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/783ccP__No8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+---
+
+# Types
+
+<ul>
+    <Appear>
+        <li>Schema</li>
+        <li>Query</li>
+        <li>Mutation</li>
+        <li>Subscription</li>
+    </Appear>
+</ul>
+
+---
+
+# Schema Type
+<ul>
+    <li>Entry Point</li>
+    <li>Embraces the three types</li>
+    <li>Source of Truth</li>
+</ul>
+
+---
+
+# Query Type
+<ul>
+    <li>Represents a data</li>
+    <li>Read</li>
+    <li>JSON</li>
+    <li>"I want a User and his/her name"</li>
+</ul>
+
+---
+
+# Mutation Type
+<ul>
+    <li>Mutate a data</li>
+    <li>Write and Read</li>
+    <li>JSON</li>
+    <li>"I want to create a new User"</li>
+    <li>"Please, return the name at the end of creation"</li>
+</ul>
+
+---
+
+# Subscription Type
+<ul>
+    <li>Listen an event</li>
+    <li>Pub and Sub</li>
+    <li>JSON</li>
+    <li>"I want to if user log in"</li>
+    <li>"Tells the user that he/she has a new talk"</li>
+</ul>
+
+---
+
+# Schema First vs Code First
+<ul>
+    <li>Listen an event</li>
+    <li>Pub and Sub</li>
+    <li>JSON</li>
+    <li>"You have new like in your photo"</li>
+</ul>
+
+---
+
+# HTTP Servers
+<ul>
+    <li>GraphQL.js with Koa or Express</li>
+    <li>Apollo Server</li>
+    <li>Express GraphQL</li>
+    <li>GraphQL Helix</li>
+</ul>
+
+---
+
+# Frontend Clients
+
+<ul>
+    <li>Relay Modern - https://relay.dev</li>
+    <li>Apollo - https://www.apollographql.com/docs/react/</li>
+    <li>urql</li>
+    <li>graphqlurql</li>
+</ul>
+
+---
+
+# GraphQL BaaS
+
+<ul>
+    <li>Back4App</li>
+    <li>Hasura</li>
+    <li>Common scenarios: Queries, Node Queries, Mutation</li>
+</ul>
+
+---
+
+# Handling Errors
+
+<ul>
+    <li>Avoid status codes</li>
+</ul>
+
+---
+
+# Tests
+<ul>
+    <li>Jests</li>
+    <li>Mock you database</li>
+    <li>Common scenarios: Queries, Node Queries, Mutation</li>
+</ul>
+
 ---
 <Thanks />
+
 ---
 <Feedback />

@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components'
-import { space, width, fontSize, color } from 'styled-system';
-import { Flex } from 'rebass';
+import React from "react";
+import styled from "styled-components";
+import { space, width, fontSize, color } from "styled-system";
+import { Flex } from "rebass";
 
 // Add styled-system functions to your component
 const Box = styled.div`
@@ -23,12 +23,12 @@ const Link = styled.a`
 
 const Me = styled.img`
   max-width: 150px;
-  max-height: 150px; 
+  max-height: 150px;
 `;
 
 const MeName = styled.span`
   font-size: 50px;
-  color: #25D7FD;
+  color: rgb(74, 183, 168);
   margin-left: 60px;
 `;
 
@@ -57,8 +57,8 @@ const SpaceBetween = styled.div`
 `;
 
 export const Root = styled.div([], {
-  width: '50vw',
-  height: '70vh',
+  width: "50vw",
+  height: "70vh",
 });
 
 const Username = styled.span`
@@ -84,25 +84,25 @@ const SocialMediaLink = ({ name, link, username }) => (
 export const Intro = () => (
   <Root>
     <Row>
-      <Me src={'./img/dan.jpg'} />
+      <Me src={"./img/dan_perfil.png"} />
       <MeName>Danilo Assis</MeName>
     </Row>
     <SpaceBetween>
       <SocialMediaLink
-        name={'github.png'}
-        link={'https://github.com/daniloab'}
-        username={'@daniloab'}
+        name={"github.png"}
+        link={"https://github.com/daniloab"}
+        username={"@daniloab"}
       />
       <SocialMediaLink
-        name={'twitter.png'}
-        link={'https://twitter.com/daniloassisb_'}
-        username={'@daniloassisb_'}
+        name={"twitter.png"}
+        link={"https://twitter.com/daniloab_"}
+        username={"@daniloab_"}
       />
     </SpaceBetween>
     <Center>
-      <EntriaLogo src={'./img/entriaLogo.png'} />
+      <EntriaLogo src={"./img/entriaLogo.png"} />
     </Center>
-    <Flex flex={1} alignItems='center' justifyContent='center' mt={30}>
+    <Flex flex={1} alignItems="center" justifyContent="center" mt={30}>
       <MeName>Fullstack Developer</MeName>
     </Flex>
   </Root>
