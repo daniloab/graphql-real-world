@@ -10,7 +10,7 @@ export const Roadmap = () => (
       <Text>Solves</Text>
       <Text>Backend</Text>
       <Text>Types</Text>
-      <Text>Schema First vs Code First</Text>
+      <Text>SDL First vs Code First</Text>
       <Text>GraphQL Services BaaS</Text>
       <Text>Testing</Text>
       <Text>Frontend</Text>

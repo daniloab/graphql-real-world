@@ -1,1 +1,0 @@
-self.__SSG_MANIFEST=new Set(["\u002F","\u002F[path]","\u002Fauthors\u002F[name]","\u002Fpage\u002F[number]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
