@@ -41,11 +41,11 @@ export { default as theme } from './theme'
 
 ---
 
-# What Solves
+# What GraphQL Solves
 
 <ul>
     <Appear>
-        <li>Collocation of data</li>
+        <li>Collocation of data requirements</li>
         <li>Over-Fetching and Under-Fetching</li>
         <li>Evolve APIs without versions</li>
         <li>Strong type system</li>
@@ -100,7 +100,7 @@ export { default as theme } from './theme'
 # Mutation Type
 <ul>
     <li>Mutate a data</li>
-    <li>Write and Read</li>
+    <li>Write followed by a Read</li>
     <li>JSON</li>
     <li>"I want to create a new User"</li>
     <li>"Please, return the name at the end of creation"</li>
@@ -210,10 +210,10 @@ export { default as theme } from './theme'
 ## Feel free to check
 <ul>
     <Appear>
-        <li>GraphQL.js with Koa or Express</li>
-        <li>Apollo Server</li>
-        <li>Express GraphQL</li>
-        <li>GraphQL Helix</li>
+        <li>Express - <a href="https://expressjs.com/">https://expressjs.com/</a></li>
+        <li>Koa - <a href="https://koajs.com/">https://koajs.com/</a></li>
+        <li>Apollo Server - <a href="https://www.apollographql.com/docs/apollo-server/">https://www.apollographql.com/docs/apollo-server/</a></li>
+        <li>GraphQL Helix - <a href="https://github.com/contrawork/graphql-helix">https://github.com/contrawork/graphql-helix</a></li>
     </Appear>
 </ul>
 
@@ -222,7 +222,7 @@ export { default as theme } from './theme'
 # Frontend Clients
 
 <ul>
-    <li>Relay Modern - <a href="https://relay.dev">https://relay.dev</a></li>
+    <li>Relay - <a href="https://relay.dev">https://relay.dev</a></li>
     <li>Apollo - <a href="https://www.apollographql.com/docs/react/">https://www.apollographql.com/docs/react/</a></li>
     <li>urql - <a href="https://formidable.com/open-source/urql/">https://formidable.com/open-source/urql/</a></li>
     <li>graphqlurql - <a href="https://github.com/hasura/graphqurl">https://github.com/hasura/graphqurl</a></li>
@@ -233,10 +233,10 @@ export { default as theme } from './theme'
 # GraphQL BaaS
 
 <ul>
-    <li>Apollo Studio</li>
-    <li>AWS AppSync</li>
-    <li>Back4App</li>
-    <li>Hasura</li>
+    <li>Apollo Studio - <a href="https://www.apollographql.com/docs/studio/">https://www.apollographql.com/docs/studio/</a></li>
+    <li>AWS AppSync - <a href="https://aws.amazon.com/pt/appsync/">https://aws.amazon.com/pt/appsync/</a></li>
+    <li>Back4App - <a href="https://www.back4app.com/">https://www.back4app.com/</a></li>
+    <li>Hasura - <a href="https://hasura.io/">https://hasura.io/</a></li>
 </ul>
 
 ---
@@ -252,6 +252,7 @@ export { default as theme } from './theme'
 ---
 
 # GraphQL Error Example
+<Img src='./img/error.png' width={1300} />
 
 ---
 
@@ -266,8 +267,28 @@ export { default as theme } from './theme'
 
 ---
 
-# Test Example
+<div style={{fontSize: 26}}>
+<CodeSurfer
+  title="Test Example - Query"
+  code={require('!raw-loader!./usersQueriesTest.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="typescript"
+  steps={[
+    { range: [1, 1], notes: 'Test Scenario Name'},
+    { range: [2, 14], notes: 'Some Mocks'},
+    { range: [16, 28], notes: 'Query to be requested'},
+    { range: [29, 33], notes: 'Preparatives'},
+    { range: [35, 35], notes: 'The Request'},
+    { range: [37, 42], notes: 'Expects'},
+  ]}
+/>
+</div>
 
+---
+
+# Language Support
+<Img src='./img/language_support.png' width={800} />
 
 ---
 

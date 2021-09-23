@@ -7,7 +7,7 @@ export const Roadmap = () => (
     <Flex></Flex>
     <Flex flexDirection={"column"}>
       <Text>GraphQL</Text>
-      <Text>Solves</Text>
+      <Text>What GraphQL Solves</Text>
       <Text>Backend</Text>
       <Text>Types</Text>
       <Text>SDL First vs Code First</Text>
