@@ -1,15 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { space, width, fontSize, color } from "styled-system";
 import { Flex } from "rebass";
-
-// Add styled-system functions to your component
-const Box = styled.div`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${color}
-`;
+import { OpenPixLogo } from "./OpenPixLogo";
 
 const IconImage = styled.img`
   max-height: 60px;
@@ -66,10 +58,6 @@ const Username = styled.span`
   margin-left: 20px;
 `;
 
-const EntriaLogo = styled.img`
-  max-width: 600px;
-`;
-
 const SocialMediaLink = ({ name, link, username }) => (
   <div>
     <Link href={link} target="_blank">
@@ -100,10 +88,10 @@ export const Intro = () => (
       />
     </SpaceBetween>
     <Center>
-      <EntriaLogo src={"./img/entriaLogo.png"} />
+      <OpenPixLogo />
     </Center>
     <Flex flex={1} alignItems="center" justifyContent="center" mt={30}>
-      <MeName>Fullstack Developer</MeName>
+      <MeName>Tech Lead - Fullstack Developer</MeName>
     </Flex>
   </Root>
 );

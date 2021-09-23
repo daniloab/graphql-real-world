@@ -7,6 +7,9 @@ import { Intro } from './Intro';
 import { Roadmap } from './Roadmap';
 import { Thanks } from './Thanks';
 import { Feedback } from './Feedback';
+import { Patreon } from './Patreon';
+import { Social } from './Social';
+import {Img} from './Img'
 
 export { default as theme } from './theme'
 
@@ -52,9 +55,9 @@ export { default as theme } from './theme'
 
 ---
 
-## The Documentary
+# TalkDeck App
+<Img src='./img/app.png' width={250} mb='100px'/>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/783ccP__No8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ---
 
 # Types
@@ -89,6 +92,11 @@ export { default as theme } from './theme'
 
 ---
 
+# Query Example
+<Img src='./img/query_example.png' width={1300} />
+
+---
+
 # Mutation Type
 <ul>
     <li>Mutate a data</li>
@@ -97,6 +105,11 @@ export { default as theme } from './theme'
     <li>"I want to create a new User"</li>
     <li>"Please, return the name at the end of creation"</li>
 </ul>
+
+---
+
+# Mutation Example
+<Img src='./img/mutation_example.png' width={1300} />
 
 ---
 
@@ -111,22 +124,97 @@ export { default as theme } from './theme'
 
 ---
 
-# Schema First vs Code First
+# TalkDeck Types
+<Img src='./img/app2.png' width={700} />
+
+---
+
+# SDL First vs Code First
+<Img src='./img/schemavscode.png' />
+
+---
+
+# SDL First vs Code First
 <ul>
-    <li>Listen an event</li>
-    <li>Pub and Sub</li>
-    <li>JSON</li>
-    <li>"You have new like in your photo"</li>
+    <li>Defines the GraphQL Schema Types</li>
+    <li>Works as a contract between frontend and backend</li>
+    <li>Schema first: we define the schema and make the code match with it</li>
+    <li>Code first: we code first and then the code generates our schema</li>
+    <li>Both schemas are generated with SDL (System Definition Language)</li>
+    <li>The choice is opinionated</li>
 </ul>
 
 ---
 
+<div style={{fontSize: 26}}>
+<CodeSurfer
+  title="SDL First - schema.graphql"
+  code={require('!raw-loader!./schemagraphql.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="typescript"
+  steps={[
+    { range: [1, 12], notes: 'Mutation'},
+    { range: [14, 21], notes: 'Query'},
+    { range: [23, 33], notes: 'Subscription'},
+    { range: [34,50], notes: 'Types'},
+  ]}
+/>
+</div>
+
+
+---
+<div style={{fontSize: 26}}>
+<CodeSurfer
+  title="Code First - schema.ts"
+  code={require('!raw-loader!./schema.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="typescript"
+  steps={[
+    { range: [1, 10], notes: 'Schema'},
+    { range: [6, 10], notes: 'Schema'},
+  ]}
+/>
+</div>
+
+---
+<div style={{fontSize: 26}}>
+<CodeSurfer
+  title="Code First - QueryType"
+  code={require('!raw-loader!./queryType.ts')}
+  showNumbers={false}
+  dark={true}
+  lang="typescript"
+  steps={[
+    { range: [1, 99], notes: 'Query Type'},
+    { range: [1, 24], notes: 'Mocks'},
+    { range: [26, 31], notes: 'Query Field Declaration'},
+    { range: [32, 34], notes: 'Version Field'},
+    { range: [36, 41], notes: 'Me Field'},
+    { range: [42, 47], notes: 'Users Field'},
+    { range: [48, 62], notes: 'User Field'},
+    { range: [63, 68], notes: 'Talks Field'},
+    { range: [69, 84], notes: 'Talk Field'},
+  ]}
+/>
+</div>
+
+---
+
 # HTTP Servers
+
+<Img src='./img/serverslogo.png' />
+
+---
+## Feel free to check
 <ul>
-    <li>GraphQL.js with Koa or Express</li>
-    <li>Apollo Server</li>
-    <li>Express GraphQL</li>
-    <li>GraphQL Helix</li>
+    <Appear>
+        <li>GraphQL.js with Koa or Express</li>
+        <li>Apollo Server</li>
+        <li>Express GraphQL</li>
+        <li>GraphQL Helix</li>
+    </Appear>
 </ul>
 
 ---
@@ -134,10 +222,10 @@ export { default as theme } from './theme'
 # Frontend Clients
 
 <ul>
-    <li>Relay Modern - https://relay.dev</li>
-    <li>Apollo - https://www.apollographql.com/docs/react/</li>
-    <li>urql</li>
-    <li>graphqlurql</li>
+    <li>Relay Modern - <a href="https://relay.dev">https://relay.dev</a></li>
+    <li>Apollo - <a href="https://www.apollographql.com/docs/react/">https://www.apollographql.com/docs/react/</a></li>
+    <li>urql - <a href="https://formidable.com/open-source/urql/">https://formidable.com/open-source/urql/</a></li>
+    <li>graphqlurql - <a href="https://github.com/hasura/graphqurl">https://github.com/hasura/graphqurl</a></li>
 </ul>
 
 ---
@@ -145,9 +233,10 @@ export { default as theme } from './theme'
 # GraphQL BaaS
 
 <ul>
+    <li>Apollo Studio</li>
+    <li>AWS AppSync</li>
     <li>Back4App</li>
     <li>Hasura</li>
-    <li>Common scenarios: Queries, Node Queries, Mutation</li>
 </ul>
 
 ---
@@ -156,19 +245,46 @@ export { default as theme } from './theme'
 
 <ul>
     <li>Avoid status codes</li>
+    <li>Specific field for server errors</li>
+    <li>Specific Field for query, mutation, subscription error</li>
 </ul>
+
+---
+
+# GraphQL Error Example
 
 ---
 
 # Tests
 <ul>
-    <li>Jests</li>
+    <li>Jest</li>
+    <li>Common scenarios: Queries, Node Queries, Mutation</li>
+    <li>Do a normally request passing into the body graphql string</li>
     <li>Mock you database</li>
     <li>Common scenarios: Queries, Node Queries, Mutation</li>
 </ul>
 
 ---
+
+# Test Example
+
+
+---
+
+## The Documentary
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/783ccP__No8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
 <Thanks />
+
+---
+<Patreon />
+
+---
+<Social/>
+
+---
 
 ---
 <Feedback />

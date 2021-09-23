@@ -1,18 +1,11 @@
-import React from 'react';
-import styled from 'styled-components'
-import { space, width, fontSize, color } from 'styled-system';
-
-// Add styled-system functions to your component
-const Box = styled.div`
-  ${space}
-  ${width}
-  ${fontSize}
-  ${color}
-`;
+import React from "react";
+import styled from "styled-components";
+import { space } from "styled-system";
+import { OpenPixLogo } from "./OpenPixLogo";
 
 export const Root = styled.div([], {
-  width: '50vw',
-  height: '70vh',
+  width: "50vw",
+  height: "70vh",
 });
 
 const SpaceBetween = styled.div`
@@ -31,7 +24,7 @@ const ThanksText = styled.span`
 
 const HiringText = styled.span`
   font-size: 100px;
-  color: #25D7FD;
+  color: #25d7fd;
 `;
 
 export const Center = styled.div`
@@ -42,11 +35,6 @@ export const Center = styled.div`
   justify-content: center;
 `;
 
-const EntriaLogo = styled.img`
-  max-width: 600px;
-  margin-top: 100px;
-`;
-
 export const Thanks = () => (
   <Root>
     <Center>
@@ -55,12 +43,9 @@ export const Thanks = () => (
     <SpaceBetween mt={50} mb={50}>
       <HiringText>We are hiring!</HiringText>
     </SpaceBetween>
-    <a
-      href='https://entria.feedback.house/vagas/vaga/Sm9iUG9zdGluZzo1YWY5OTU0NDQ3MGYyMzAwMGYyMTRiYjI='
-    >
-      Join Us</a>
+    <a href="https://entria.contrata.vc/">Join Us</a>
     <Center>
-      <EntriaLogo src={'./img/entriaLogo.png'} />
+      <OpenPixLogo />
     </Center>
   </Root>
 );
